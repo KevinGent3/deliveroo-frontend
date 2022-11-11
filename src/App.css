@@ -75,3 +75,14 @@ article img {
   width: 130px;
   object-fit: cover;
 }
+main {
+  display: flex;
+}
+
+.main-right {
+  flex: 1;
+  border: red solid 1px;
+  position: sticky;
+  align-self: flex-start;
+  top: 30px;
+}
