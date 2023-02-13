@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+@import url("./Assets/styles/font.css");
+
+/* General style */
+
+body {
+  font-family: "Stratos Deliveroo Web", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+p {
+  font-family: "IBM Plex Sans";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: "IBM Plex Sans";
+}
+
+/* Header */
+
+.header {
+  padding-bottom: 10px;
+  border-bottom: solid 1px lightgray;
+}
+.header img {
+  padding-top: 20px;
+  width: 155px;
+  height: 41px;
+}
+/* Hero */
+
+.hero {
+  margin-top: 50px;
+  display: flex;
+}
+
+.hero img {
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-left: 50px;
+}
+
+.hero p {
+  font-size: 19px;
+}
+
+/* Content */
+
+.content {
+  background-color: #f3f5f5;
+  padding-top: 30px;
+}
+
+.sections-container {
+  display: flex;
+  /* margin-top: 30px; */
+}
+
+.left-section {
+  /* border: solid blue 2px; */
+  width: 65%;
+}
+
+.right-section {
+  /* border: solid red 2px; */
+  width: 35%;
+}
+
+.meals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sections-container {
+  gap: 30px;
+}
+.meal {
+  /* border: solid orange 2px; */
+  width: 48%;
+  height: 160px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.meal:hover {
+  box-shadow: 5px 5px 5px black;
+}
+
+.meal p:first-child {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.meal p:second-child {
+  font-size: 14px;
+  overflow-y: scroll;
+}
+
+.description-container {
+  height: 43px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.meal img {
+  height: 130px;
+  width: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-left: 15px;
+}
+
+.price-popular-container {
+  display: flex;
+}
+
+.price-popular-container p {
+  margin-right: 20px;
+}
+.popular-tag {
+  display: flex;
+  gap: 3px;
+}
+.right-section {
+  position: sticky;
+  border-radius: 5px;
+  top: 20px;
+  padding: 15px 15px;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: fl;
+  background-color: white;
+}
+
+.right-section button {
+  border: solid 2px #00cdbd;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+.right-section .valid-cart {
+  border: solid 2px #00cdbd;
+  border-radius: 5px;
+  background-color: #00cdbd;
   color: white;
+  height: 50px;
+  width: 400px;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+}
+.meal-information {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-fees {
+  border-top: solid 2px lightgray;
+  padding: 10px 0;
+
+  border-bottom: solid 2px lightgray;
+}
+.cart-fees p {
+  margin: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.total {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sous-total {
+  display: flex;
+  justify-content: space-between;
+}
+.frais-livraison {
+  display: flex;
+  justify-content: space-between;
+}
+.meal-price {
+  display: flex;
+  justify-content: space-around;
+}
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
 }
